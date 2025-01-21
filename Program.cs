@@ -33,6 +33,8 @@ builder.Services.AddAuthorization();
 builder.Services.AddControllers();
 
 var app = builder.Build();
+app.UseHttpsRedirection();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -62,6 +64,22 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast")
 .WithOpenApi();
+
+public static IHostBuilder CreateHostBuilder(string[] args) =>
+    Host.CreateDefaultBuilder(args)
+        .ConfigureWebHostDefaults(webBuilder =>
+        {
+            webBuilder.ConfigureKestrel((context, options) =>
+            {
+                options.ListenAnyIP(5000); // HTTP
+                options.ListenAnyIP(5001, listenOptions => // HTTPS
+                {
+                    listenOptions.UseHttps();
+                });
+            });
+            webBuilder.UseStartup<Startup>();
+        });
+
 
 app.Run();
 
