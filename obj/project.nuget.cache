@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "c9jT9DFTgt0=",
+  "dgSpecHash": "jnhqMr7Lz+o=",
   "success": true,
   "projectFilePath": "/Users/abhijayrajvansh/Desktop/TodoApp/TodoApp.csproj",
   "expectedPackageFiles": [
     "/Users/abhijayrajvansh/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/abhijayrajvansh/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",
+    "/Users/abhijayrajvansh/.nuget/packages/bcrypt.net/0.1.0/bcrypt.net.0.1.0.nupkg.sha512",
     "/Users/abhijayrajvansh/.nuget/packages/microsoft.aspnetcore.openapi/8.0.12/microsoft.aspnetcore.openapi.8.0.12.nupkg.sha512",
     "/Users/abhijayrajvansh/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/abhijayrajvansh/.nuget/packages/microsoft.bcl.memory/9.0.0/microsoft.bcl.memory.9.0.0.nupkg.sha512",
@@ -64,5 +65,16 @@
     "/Users/abhijayrajvansh/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/Users/abhijayrajvansh/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BCrypt.Net 0.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "BCrypt.Net",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
